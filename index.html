@@ -1,280 +1,315 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="LaVida : parfums élégants et pyjamas confortables.">
-  <title>LaVida | Parfums & Pyjamas</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #fffaf6;
-      color: #493837;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 18px;
-      padding: 22px 7%;
-      background: #ffffff;
-      border-bottom: 1px solid #f0e2dc;
-    }
-
-    .logo {
-      color: #b77886;
-      font-size: 30px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-decoration: none;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 22px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #493837;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: #b77886;
-    }
-
-    .hero {
-      padding: 95px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #f4dfe2, #fff0df);
-    }
-
-    .hero small {
-      color: #a66f7c;
-      letter-spacing: 3px;
-    }
-
-    .hero h1 {
-      margin: 22px 0;
-      font-size: clamp(32px, 6vw, 55px);
-    }
-
-    .hero p {
-      max-width: 600px;
-      margin: 0 auto 25px;
-      color: #806c68;
-      line-height: 1.9;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 13px 24px;
-      border: none;
-      border-radius: 30px;
-      background: #b77886;
-      color: white;
-      text-decoration: none;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .button:hover {
-      background: #965c6a;
-    }
-
-    .section {
-      padding: 60px 7%;
-      text-align: center;
-    }
-
-    .section h2 {
-      margin-bottom: 12px;
-      font-size: 30px;
-    }
-
-    .subtitle {
-      color: #8c7771;
-      line-height: 1.8;
-    }
-
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 35px;
-    }
-
-    .category {
-      padding: 45px 20px;
-      border: 1px solid #efddd8;
-      border-radius: 16px;
-      background: #f7e9e3;
-    }
-
-    .category h3 {
-      margin-bottom: 15px;
-      color: #80545d;
-      font-size: 25px;
-    }
-
-    .category p {
-      margin-bottom: 22px;
-      color: #806c68;
-      line-height: 1.8;
-    }
-
-    .about {
-      background: #f4e4df;
-    }
-
-    .about p {
-      max-width: 650px;
-      margin: 15px auto 0;
-      color: #806c68;
-      line-height: 2;
-    }
-
-    footer {
-      padding: 30px 15px;
-      background: #493837;
-      color: white;
-      text-align: center;
-      line-height: 2;
-    }
-
-    footer p {
-      color: #f3dfdf;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        justify-content: center;
-      }
-
-      nav {
-        justify-content: center;
-        gap: 14px;
-      }
-
-      .categories {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 70px 18px;
-      }
-
-      .section {
-        padding: 45px 6%;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LaVida | Boutique élégante</title>
+<style>
+:root{--pink:#d58e9b;--light:#f9e9e9;--beige:#f7f0e6;--brown:#684a45;--dark:#352927;--white:#fffdfb}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;background:var(--white);color:var(--dark)}
+header{background:white;position:sticky;top:0;z-index:5;box-shadow:0 2px 12px #0001}
+.head{max-width:1150px;margin:auto;padding:10px 5%;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.logo{display:flex;align-items:center;gap:10px;font-size:23px;font-weight:bold;color:var(--brown)}
+.logo img{width:58px;height:58px;object-fit:contain}
+button{cursor:pointer;font:inherit}
+.cartbtn,.btn{border:0;border-radius:24px;background:var(--pink);color:white;padding:11px 16px;font-weight:bold}
+nav{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;padding:0 10px 14px;font-size:14px}
+nav a{text-decoration:none;color:var(--brown)}
+nav a:hover{color:var(--pink)}
+.hero{padding:65px 6%;text-align:center;background:linear-gradient(135deg,var(--light),var(--beige))}
+.hero h1{font: bold clamp(35px,6vw,58px) Georgia,serif;color:var(--brown);margin:0 0 15px}
+.hero p{max-width:600px;margin:0 auto 25px;line-height:1.8;color:#795e57}
+.btnlink{display:inline-block;text-decoration:none}
+.section{max-width:1150px;margin:auto;padding:50px 5%}
+.soft{background:var(--light)}
+h2.title{text-align:center;color:var(--brown);font: bold 32px Georgia,serif;margin:0 0 12px}
+.desc{text-align:center;color:#8c7770;line-height:1.7;margin:0 auto 30px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:20px}
+.card{border:1px solid #f0e3df;border-radius:14px;overflow:hidden;background:white;display:flex;flex-direction:column;box-shadow:0 5px 18px #684a450a}
+.card img{width:100%;height:235px;object-fit:contain;background:#fbf4f0}
+.info{padding:14px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;flex:1}
+.info h3{font-size:16px;color:var(--brown);margin:0}
+.price{color:#bd687c;font-weight:bold}
+.info .btn{width:100%;margin-top:auto}
+.about{text-align:center;max-width:700px;margin:auto;line-height:1.9}
+.panel{max-width:750px;margin:auto;background:white;border:1px solid #f0e3df;border-radius:16px;padding:22px}
+.cartitem{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #eee}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{border:1px solid #e5c6c8;border-radius:7px;background:white;padding:5px 10px}
+.total{text-align:right;font-size:21px;font-weight:bold;color:var(--brown);margin:20px 0}
+form{display:grid;gap:12px;margin-top:25px}
+input,textarea,select{width:100%;padding:12px;border:1px solid #e7d6d1;border-radius:9px;background:#fffdfb}
+label{font-size:14px;color:var(--brown)}
+footer{background:var(--brown);color:white;text-align:center;padding:28px 15px;line-height:1.8}
+.small{font-size:13px;color:#8c7770;line-height:1.6}
+[hidden]{display:none!important}
+@media(max-width:480px){.logo{font-size:18px}.logo img{width:45px;height:45px}.head{padding:8px 3%}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card img{height:185px}.info{padding:10px}.info h3{font-size:14px}.cartbtn{padding:10px;font-size:13px}}
+</style>
 </head>
-
 <body>
 
-  <header>
-    <a href="#accueil" class="logo">LaVida</a>
+<header>
+  <div class="head">
+    <a class="logo" href="#accueil">
+      <img src="Logo1.png" alt="Logo LaVida">
+      <span>LaVida</span>
+    </a>
+    <button class="cartbtn" onclick="goCart()">🛍️ Panier (<span id="count">0</span>)</button>
+  </div>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#pyjamas">Pyjamas</a>
+    <a href="#parfums">Parfums</a>
+    <a href="#packs">Packs Cadeaux</a>
+    <a href="#apropos">À propos</a>
+  </nav>
+</header>
 
-    <nav>
-      <a href="#accueil">Accueil</a>
-      <a href="#collections">Collections</a>
-      <a href="#apropos">À propos</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<main>
+<section class="hero" id="accueil">
+  <h1>L'élégance au quotidien</h1>
+  <p>Bienvenue chez LaVida, votre univers de douceur, de parfums et de cadeaux pour vous faire plaisir ou faire plaisir à ceux que vous aimez.</p>
+  <a class="btn btnlink" href="#pyjamas">Découvrir la collection</a>
+</section>
 
-  <main>
+<section class="section" id="pyjamas">
+  <h2 class="title">Nos Pyjamas</h2>
+  <p class="desc">Des modèles doux et élégants pour vos moments de détente.</p>
+  <div class="products" id="pyjamaProducts"></div>
+</section>
 
-    <section class="hero" id="accueil">
-      <small>BIENVENUE CHEZ LAVIDA</small>
+<section class="section soft" id="parfums">
+  <h2 class="title">Nos Parfums</h2>
+  <p class="desc">Découvrez votre prochaine fragrance préférée.</p>
+  <div class="products" id="perfumeProducts"></div>
+  <p class="desc small">Les parfums seront ajoutés ici lorsque leurs photos et leurs prix seront prêts.</p>
+</section>
 
-      <h1>L'élégance au quotidien</h1>
+<section class="section" id="packs">
+  <h2 class="title">Nos Packs Cadeaux</h2>
+  <p class="desc">Des associations de produits pour offrir un cadeau plein d'attention.</p>
+  <div class="products" id="packProducts"></div>
+  <p class="desc small">Les packs seront ajoutés ici lorsque leurs photos, contenus et prix seront prêts.</p>
+</section>
 
-      <p>
-        Découvrez notre univers de parfums envoûtants
-        et de pyjamas élégants.
-        Votre style, votre douceur, votre signature.
-      </p>
+<section class="section soft" id="apropos">
+  <h2 class="title">À propos de LaVida</h2>
+  <div class="about">
+    <p>LaVida vous propose une sélection de pyjamas, de parfums et de packs cadeaux pour ajouter une touche de douceur à votre quotidien.</p>
+    <p><em>Plus qu'une boutique, un art de vivre.</em></p>
+  </div>
+</section>
 
-      <a href="#collections" class="button">
-        Découvrir nos collections
-      </a>
-    </section>
+<section class="section" id="panier">
+  <h2 class="title">Votre panier</h2>
+  <p class="desc">Vérifiez votre sélection avant de confirmer votre commande.</p>
+  <div class="panel">
+    <div id="cartItems">Votre panier est vide.</div>
+    <div class="total">Total : <span id="total">0</span> DH</div>
 
-    <section class="section" id="collections">
-      <h2>Nos collections</h2>
+    <form id="orderForm">
+      <h3>Informations de livraison</h3>
+      <label for="customer">Nom complet</label>
+      <input id="customer" required placeholder="Votre nom complet">
 
-      <p class="subtitle">
-        Des parfums qui vous ressemblent et des pyjamas
-        qui vous enveloppent de douceur.
-      </p>
+      <label for="phone">Téléphone</label>
+      <input id="phone" type="tel" required placeholder="Votre numéro de téléphone">
 
-      <div class="categories">
+      <label for="city">Ville</label>
+      <input id="city" required placeholder="Votre ville">
 
-        <article class="category">
-          <h3>Nos parfums</h3>
+      <label for="address">Adresse de livraison</label>
+      <textarea id="address" required rows="3" placeholder="Votre adresse complète"></textarea>
 
-          <p>
-            Des fragrances délicates et envoûtantes
-            pour toutes les occasions.
-          </p>
+      <label for="notes">Remarques (facultatif)</label>
+      <textarea id="notes" rows="2" placeholder="Taille, couleur ou autres précisions"></textarea>
 
-          <a href="#contact" class="button">
-            Découvrir les parfums
-          </a>
-        </article>
+      <button class="btn" type="submit">Commander via WhatsApp</button>
+      <p class="small">Votre commande sera préparée dans WhatsApp pour vérification et envoi.</p>
+    </form>
+  </div>
+</section>
+</main>
 
-        <article class="category">
-          <h3>Nos pyjamas</h3>
+<footer>
+  <strong>LaVida</strong><br>
+  Parfums • Pyjamas • Packs Cadeaux<br>
+  <span>Plus qu'une boutique, un art de vivre.</span>
+</footer>
 
-          <p>
-            Un mélange parfait de confort,
-            de douceur et d'élégance.
-          </p>
+<script>
+// MODIFIEZ CE NUMÉRO AVANT DE PUBLIER LE SITE.
+// Format international sans +, espaces ni tirets.
+const WHATSAPP_NUMBER = "212600000000";
 
-          <a href="#contact" class="button">
-            Découvrir les pyjamas
-          </a>
-        </article>
+// PRIX TEMPORAIRES : remplacez-les par vos vrais prix en DH.
+const products = [
+  ...Array.from({length:16},(_,i)=>({
+    id:"pyjama"+(i+1),
+    name:"Pyjama "+(i+1),
+    category:"pyjama",
+    image:"Pyjama"+(i+1)+".png",
+    price:150
+  }))
+];
 
-      </div>
-    </section>
+// Ajoutez les parfums et packs ici quand leurs photos et prix seront prêts.
+// Exemple :
+// {id:"parfum1",name:"Parfum 1",category:"parfum",image:"Parfum1.png",price:120}
+// {id:"pack1",name:"Pack Douceur",category:"pack",image:"Pack1.png",price:250}
 
-    <section class="section about" id="apropos">
-      <h2>À propos de LaVida</h2>
+const cart = {};
 
-      <p>
-        LaVida est un univers dédié à la beauté,
-        au confort et à l'élégance.
-        Découvrez notre sélection de parfums et de pyjamas
-        pensés pour accompagner vos plus beaux moments.
-      </p>
-    </section>
+function formatPrice(price){
+  return new Intl.NumberFormat("fr-FR").format(price);
+}
 
-  </main>
+function renderProducts(category, containerId){
+  const container = document.getElementById(containerId);
+  const items = products.filter(p=>p.category===category);
+  container.innerHTML = "";
 
-  <footer id="contact">
-    <h3>LaVida</h3>
-    <p>La beauté se cache dans les détails.</p>
-    <p>Merci de visiter notre boutique.</p>
-    <p>© 2026 LaVida — Tous droits réservés.</p>
-  </footer>
+  items.forEach(p=>{
+    const card = document.createElement("article");
+    card.className = "card";
 
+    const img = document.createElement("img");
+    img.src = p.image;
+    img.alt = p.name;
+    img.loading = "lazy";
+    img.onerror = ()=>{img.style.display="none";};
+
+    const info = document.createElement("div");
+    info.className = "info";
+
+    const name = document.createElement("h3");
+    name.textContent = p.name;
+
+    const price = document.createElement("div");
+    price.className = "price";
+    price.textContent = formatPrice(p.price)+" DH";
+
+    const button = document.createElement("button");
+    button.className = "btn";
+    button.textContent = "Ajouter au panier";
+    button.onclick = ()=>addToCart(p.id);
+
+    info.append(name,price,button);
+    card.append(img,info);
+    container.append(card);
+  });
+}
+
+function addToCart(id){
+  const p = products.find(item=>item.id===id);
+  if(!p) return;
+  cart[id] = (cart[id]||0)+1;
+  renderCart();
+}
+
+function changeQty(id,change){
+  cart[id] = (cart[id]||0)+change;
+  if(cart[id]<=0) delete cart[id];
+  renderCart();
+}
+
+function renderCart(){
+  const box = document.getElementById("cartItems");
+  box.innerHTML = "";
+  let total = 0, count = 0;
+
+  Object.entries(cart).forEach(([id,qty])=>{
+    const p = products.find(item=>item.id===id);
+    if(!p) return;
+
+    total += p.price*qty;
+    count += qty;
+
+    const row = document.createElement("div");
+    row.className = "cartitem";
+
+    const label = document.createElement("div");
+    label.textContent = p.name+" — "+formatPrice(p.price*qty)+" DH";
+
+    const controls = document.createElement("div");
+    controls.className = "qty";
+
+    const minus = document.createElement("button");
+    minus.type = "button";
+    minus.textContent = "−";
+    minus.setAttribute("aria-label","Retirer un article");
+    minus.onclick = ()=>changeQty(id,-1);
+
+    const number = document.createElement("span");
+    number.textContent = qty;
+
+    const plus = document.createElement("button");
+    plus.type = "button";
+    plus.textContent = "+";
+    plus.setAttribute("aria-label","Ajouter un article");
+    plus.onclick = ()=>changeQty(id,1);
+
+    controls.append(minus,number,plus);
+    row.append(label,controls);
+    box.append(row);
+  });
+
+  if(count===0) box.textContent = "Votre panier est vide.";
+  document.getElementById("count").textContent = count;
+  document.getElementById("total").textContent = formatPrice(total);
+}
+
+function goCart(){
+  document.getElementById("panier").scrollIntoView({behavior:"smooth"});
+}
+
+document.getElementById("orderForm").addEventListener("submit",function(event){
+  event.preventDefault();
+
+  const entries = Object.entries(cart);
+  if(entries.length===0){
+    alert("Veuillez ajouter au moins un produit à votre panier.");
+    return;
+  }
+
+  if(WHATSAPP_NUMBER==="212600000000"){
+    alert("Veuillez remplacer le numéro WhatsApp de démonstration dans le code par votre numéro.");
+    return;
+  }
+
+  let total = 0;
+  const lines = entries.map(([id,qty])=>{
+    const p = products.find(item=>item.id===id);
+    total += p.price*qty;
+    return "• "+p.name+" x "+qty+" = "+formatPrice(p.price*qty)+" DH";
+  });
+
+  const message = [
+    "Bonjour LaVida ! Je souhaite passer une commande :",
+    "",
+    ...lines,
+    "",
+    "Total des produits : "+formatPrice(total)+" DH",
+    "",
+    "Nom : "+document.getElementById("customer").value.trim(),
+    "Téléphone : "+document.getElementById("phone").value.trim(),
+    "Ville : "+document.getElementById("city").value.trim(),
+    "Adresse : "+document.getElementById("address").value.trim(),
+    "Remarques : "+(document.getElementById("notes").value.trim()||"Aucune"),
+    "",
+    "Merci de confirmer ma commande et les frais de livraison."
+  ].join("\n");
+
+  const url = "https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message);
+  window.open(url,"_blank");
+});
+
+renderProducts("pyjama","pyjamaProducts");
+renderProducts("parfum","perfumeProducts");
+renderProducts("pack","packProducts");
+renderCart();
+</script>
 </body>
 </html>
