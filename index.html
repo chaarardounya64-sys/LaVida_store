@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LaVida : parfums élégants et pyjamas confortables.">
+  <title>LaVida | Parfums & Pyjamas</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffaf6;
+      color: #493837;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      padding: 22px 7%;
+      background: #ffffff;
+      border-bottom: 1px solid #f0e2dc;
+    }
+
+    .logo {
+      color: #b77886;
+      font-size: 30px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #493837;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #b77886;
+    }
+
+    .hero {
+      padding: 95px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #f4dfe2, #fff0df);
+    }
+
+    .hero small {
+      color: #a66f7c;
+      letter-spacing: 3px;
+    }
+
+    .hero h1 {
+      margin: 22px 0;
+      font-size: clamp(32px, 6vw, 55px);
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 25px;
+      color: #806c68;
+      line-height: 1.9;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 24px;
+      border: none;
+      border-radius: 30px;
+      background: #b77886;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: #965c6a;
+    }
+
+    .section {
+      padding: 60px 7%;
+      text-align: center;
+    }
+
+    .section h2 {
+      margin-bottom: 12px;
+      font-size: 30px;
+    }
+
+    .subtitle {
+      color: #8c7771;
+      line-height: 1.8;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 35px;
+    }
+
+    .category {
+      padding: 45px 20px;
+      border: 1px solid #efddd8;
+      border-radius: 16px;
+      background: #f7e9e3;
+    }
+
+    .category h3 {
+      margin-bottom: 15px;
+      color: #80545d;
+      font-size: 25px;
+    }
+
+    .category p {
+      margin-bottom: 22px;
+      color: #806c68;
+      line-height: 1.8;
+    }
+
+    .about {
+      background: #f4e4df;
+    }
+
+    .about p {
+      max-width: 650px;
+      margin: 15px auto 0;
+      color: #806c68;
+      line-height: 2;
+    }
+
+    footer {
+      padding: 30px 15px;
+      background: #493837;
+      color: white;
+      text-align: center;
+      line-height: 2;
+    }
+
+    footer p {
+      color: #f3dfdf;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .categories {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 70px 18px;
+      }
+
+      .section {
+        padding: 45px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="#accueil" class="logo">LaVida</a>
+
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#collections">Collections</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="accueil">
+      <small>BIENVENUE CHEZ LAVIDA</small>
+
+      <h1>L'élégance au quotidien</h1>
+
+      <p>
+        Découvrez notre univers de parfums envoûtants
+        et de pyjamas élégants.
+        Votre style, votre douceur, votre signature.
+      </p>
+
+      <a href="#collections" class="button">
+        Découvrir nos collections
+      </a>
+    </section>
+
+    <section class="section" id="collections">
+      <h2>Nos collections</h2>
+
+      <p class="subtitle">
+        Des parfums qui vous ressemblent et des pyjamas
+        qui vous enveloppent de douceur.
+      </p>
+
+      <div class="categories">
+
+        <article class="category">
+          <h3>Nos parfums</h3>
+
+          <p>
+            Des fragrances délicates et envoûtantes
+            pour toutes les occasions.
+          </p>
+
+          <a href="#contact" class="button">
+            Découvrir les parfums
+          </a>
+        </article>
+
+        <article class="category">
+          <h3>Nos pyjamas</h3>
+
+          <p>
+            Un mélange parfait de confort,
+            de douceur et d'élégance.
+          </p>
+
+          <a href="#contact" class="button">
+            Découvrir les pyjamas
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section about" id="apropos">
+      <h2>À propos de LaVida</h2>
+
+      <p>
+        LaVida est un univers dédié à la beauté,
+        au confort et à l'élégance.
+        Découvrez notre sélection de parfums et de pyjamas
+        pensés pour accompagner vos plus beaux moments.
+      </p>
+    </section>
+
+  </main>
+
+  <footer id="contact">
+    <h3>LaVida</h3>
+    <p>La beauté se cache dans les détails.</p>
+    <p>Merci de visiter notre boutique.</p>
+    <p>© 2026 LaVida — Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
